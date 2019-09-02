@@ -1,0 +1,54 @@
+mixin list(item, depth)
+  if (item.links)
+    ul(style='padding: 0px 0px 0px 18px;')
+      each subItem, index in item.links
+        if (index > 0 && depth < 2)
+          p
+        li
+          if (subItem.url)
+            a(href=subItem.url): =subItem.title
+          else
+            =subItem.title
+          if (subItem.note)
+            em=' - '+subItem.note
+          +list(subItem, depth+1)
+
+mixin page(localTopic)
+  doctype html
+  html(lang='en', style='height: 100%; width: 100%; padding: 0; margin 0;')
+    head
+      meta(http-equiv='content-type', content='text/html; charset=UTF-8') 
+      meta(charset='UTF-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      meta(name='Description', content='A simple HTML file in order to demonstrate the basics of local html file development.')
+      title
+        =localTopic.title
+    body(style='padding: 0px; margin: 0px; height: 100%; width: 100%;')
+      div(style='display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; height: 100%; width: 100%;')
+        header(style='display: block;')
+          div(style='padding: 0px; margin: 0px; background: #262c35; display: table; width: 100%;')
+            span(style='padding: 4px 0px 0px 0px; color: #ffffcc; width: 50px; display: table-cell; vertical-align: middle; text-align: center;')
+              img(src='http://res.cloudinary.com/jsdevtools/image/upload/ar_1:1,bo_2px_solid_rgb:f93d3d,c_fill,g_auto,r_max,w_40/jslogo.png')
+            span(style='color: #ffffcc; display: table-cell; vertical-align: middle;')
+              h1(style='padding: 0px; margin: 0px; font-size: 30px;')|JSDevTools
+          div(style='border: solid; border-width: 0px 1px 1px 1px; background: #f93d3d; padding-left: 10px;')
+            =localTopic.title
+        div(style='display: flex; display: -ms-flexbox; flex: 1 1 0px;')
+          aside(style='display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; flex: 1 1 0px;')
+            div(style='flex: 1 1 0px; background: lightgrey;')
+          div(style='display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; flex-basis: 782px;')
+            div(style='display:flex; flex: 1 1 0px; overflow-y: auto; max-width: 800px; margin: 0 0 0 18px;')
+              article(style='display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; padding: 0px; flex: 1 1 582px;')
+                div(style='flex: 1 1 0px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-all; word-break: break-word; hyphens: auto;')
+                  +list(localTopic, 0)
+              nav(style='display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; flex: 1 1 200px;')
+                div(style='flex: 1 1 0px;')
+                  ul
+                    each topic in nav
+                      li(list-style-type='none')
+                        a(href=topic.filename+'.html')=topic.title
+            block footer
+              footer(style='display: block; text-align: right;')
+                em(style='padding-right: 18px; font-size: 12px;')|Brought to you by justin@jsdevtools.com
+          aside(style='display: flex; display: -ms-flexbox; flex-direction: column; -ms-flex-direction: column; flex: 1 1 0px;')
+            div(style='flex: 1 1 0px; background: lightgrey;')
