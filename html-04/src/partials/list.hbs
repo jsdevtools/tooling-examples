@@ -2,7 +2,9 @@
   <ul style='padding: 0px 0px 0px 18px;'>
     {{#each item.links}}
       {{#if @index}}
-        <p>
+        {{#ifCond ../depth '<' 2}}
+          <p></p>
+        {{/ifCond}}
       {{/if}}
       <li>
         {{#if this.url}}
@@ -11,11 +13,11 @@
           {{this.title}}
         {{/if}}
         {{#if this.note}}
-          <em>' - '+{{this.note}}</em>
+          <em> - {{this.note}}</em>
         {{/if}}
         {{> list
           item=this
-          depth=depth
+          depth=(increment ../depth)
         }}
       </li>
     {{/each}}
