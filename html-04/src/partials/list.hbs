@@ -1,0 +1,23 @@
+{{#if item.links}}
+  <ul style='padding: 0px 0px 0px 18px;'>
+    {{#each item.links}}
+      {{#if @index}}
+        <p>
+      {{/if}}
+      <li>
+        {{#if this.url}}
+          <a href={{this.url}}>{{this.title}}</a>
+        {{else}}
+          {{this.title}}
+        {{/if}}
+        {{#if this.note}}
+          <em>' - '+{{this.note}}</em>
+        {{/if}}
+        {{> list
+          item=this
+          depth=depth
+        }}
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

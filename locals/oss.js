@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Operating Systems',
-  url: 'os',
+  url: 'oss',
   links: [
     {
       title: 'AIX',

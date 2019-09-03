@@ -4,11 +4,15 @@
   "description": "",
   "main": "pug.config.js",
   "dependencies": {
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "shx": "^0.3.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./pug.config.js ./locals ./dist",
+    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp ../locals.config.js ./pug.config.js && shx cp -r ../locals ./",
+    "build": "npm run prebuild && node ./node_modules/pug-cli -O ./pug.config.js src --out dist/"
   },
   "keywords": [],
   "author": "",
