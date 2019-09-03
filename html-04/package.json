@@ -5,7 +5,7 @@
   "main": "js2json.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "shx rm -Rf ./handlebars.config.js ./locals ./dist",
+    "clean": "shx rm -Rf ./handlebars.config.js ./handlebars.config.json ./locals ./dist",
     "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp ../locals.config.js ./handlebars.config.js && shx cp -r ../locals ./ && node ./js2json.js",
     "build": "npm run prebuild && node ./node_modules/hbs-cli/lib/index.js --data handlebars.config.json --partial ./src/partials/page.hbs --partial ./src/partials/list.hbs src/*.hbs --output ./dist/"
   },
