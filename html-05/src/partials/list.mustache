@@ -1,0 +1,23 @@
+{{incDepth}}
+{{#links}}
+  <ul style='padding: 0px 0px 0px 18px;'>
+    {{#incIndex}}
+      {{^isDeep}}
+        <p></p>
+      {{/isDeep}}
+    {{/incIndex}}
+    <li>
+      {{#url}}
+        <a href="{{url}}">{{title}}</a>
+      {{/url}}
+      {{^url}}
+        {{title}}
+      {{/url}}
+      {{#note}}
+        <em> - {{note}}</em>
+      {{/note}}
+        {{> list}}
+    </li>
+  </ul>
+{{/links}}
+{{decDepth}}

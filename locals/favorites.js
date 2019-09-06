@@ -3,8 +3,26 @@ module.exports = {
   url: 'index',
   links: [
     {
-    title: 'How Browsers Work: Behind the scenes of modern web browsers',
-    url: 'https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/',
+      title: 'minimist',
+      note: 'parse argument options',
+      links: [
+        {
+          title: 'Website and Source Code',
+          url: 'https://github.com/substack/minimist',
+        },
+        {
+          title: 'Cheat sheet',
+          url: 'https://devhints.io/minimist',
+        },
+        {
+          title: 'Package',
+          url: 'https://www.npmjs.com/package/minimist',
+        },
+      ],
+    },
+    {
+      title: 'How Browsers Work: Behind the scenes of modern web browsers',
+      url: 'https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/',
     },
     {
       title: 'The JAMstack: It\'s pretty sweet',
@@ -17,6 +35,10 @@ module.exports = {
     {
       title: 'GitHub Git cheat sheet',
       url: 'https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf',
+    },
+    {
+      title: 'How To Create a Pull Request on GitHub',
+      url: 'https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github',
     },
     {
       title: 'Working with JavaScript',

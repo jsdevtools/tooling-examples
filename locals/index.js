@@ -5,6 +5,7 @@ const frontends = require('./frontends.js');
 const oss = require('./oss.js');
 const podcasts = require('./podcasts.js');
 const servers = require('./servers.js');
+const templates = require('./templates.js');
 
 module.exports = {
   favorites,
@@ -14,4 +15,5 @@ module.exports = {
   oss,
   podcasts,
   servers,
+  templates,
 }

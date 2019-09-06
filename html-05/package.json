@@ -1,0 +1,24 @@
+{
+  "name": "html-05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./locals.config.js ./locals ./dist",
+    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp ../locals.config.js ./locals.config.js && shx cp -r ../locals ./",
+    "compile": "node ./node_modules/mustache/bin/mustache -p ./src/partials/page.mustache -p ./src/partials/list.mustache ./mustache.config.js",
+    "build-only": "node index.js --input ./src/*.mustache --output ./dist/",
+    "build": "npm run prebuild && npm run build-only",
+    "echo": "echo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.1.4",
+    "minimist": "^1.2.0",
+    "mustache": "github:JEStaubach/mustache.js#jsonView",
+    "shx": "^0.3.2"
+  }
+}
