@@ -1,0 +1,18 @@
+{
+  "name": "html-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf dist",
+    "build-only": "shx mkdir -p dist/ && shx cp *.html dist/",
+    "build": "npm run clean && npm run build-only"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shx": "^0.3.2"
+  }
+}
