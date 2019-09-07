@@ -1,7 +1,7 @@
 const args = require('minimist')(process.argv.slice(2));
 const glob = require('glob');
 const path = require('path');
-const exec = require('child_process').exec;
+const exec = require('child_process').execSync;
 const input = args['input'];
 const output = args['output'];
 
