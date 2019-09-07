@@ -21,6 +21,7 @@ glob(input, (er, files) => {
   }
 
   Promise.all(files.map( (file) => {
+    console.log(`compiling: ${file}`);
     const filename = path.parse(file).name;
     return execP(`npm run compile -- ${file} ${path.join(output, filename+'.html')}`)
       .then( data => {
@@ -35,13 +36,4 @@ glob(input, (er, files) => {
       if (err)
         throw err;
   });
-
-  // Now we can run a script and invoke a callback when complete, e.g.
-  /*
-  for( const file of files ) {
-    const filename = path.parse(file).name;
-    const result = exec(`npm run compile -- ${file} ${path.join(output, filename+'.html')}`);
-    console.log(`compiled: ${file}`);
-  };
-  */
 });
