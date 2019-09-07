@@ -9,7 +9,7 @@
     "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp ../locals.config.js ./locals.config.js && shx cp -r ../locals ./",
     "compile": "node ./node_modules/mustache/bin/mustache -p ./src/partials/page.mustache -p ./src/partials/list.mustache ./mustache.config.js",
     "build-only": "node index.js --input ./src/*.mustache --output ./dist/",
-    "build": "npm run prebuild && npm run build-only"
+    "build": "npm run build-only"
   },
   "keywords": [],
   "author": "",
