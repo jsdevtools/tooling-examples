@@ -1,0 +1,21 @@
+{
+  "name": "html-06",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./locals ./dist ./ejs.config.json ./js2json.js",
+    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp ../js2json.js ./ && node ./js2json.js --input ../locals.config.js --output ./ejs.config.json && shx cp -r ../locals ./",
+    "build-only": "node ./node_modules/ejs-cli/bin/ejs-cli \"*.ejs\" --base-dir src/ --options ./ejs.config.json --out ./dist/",
+    "build": "npm run build-only"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs-cli": "^2.1.0",
+    "minimist": "^1.2.0",
+    "shx": "^0.3.2"
+  }
+}

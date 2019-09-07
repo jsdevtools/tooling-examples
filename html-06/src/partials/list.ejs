@@ -1,0 +1,20 @@
+<% if (links) { %>
+  <% links.forEach( (link, idx) => { %>
+    <ul style='padding: 0px 0px 0px 18px;'>
+      <% if (idx && depth < 2) { %>
+          <p></p>
+      <% } %>
+      <li>
+        <% if (link.url) { %>
+          <a href=<%- '"' + link.url + '"' %>><%= link.title %></a>
+        <% } else { %>
+          <%= link.title %>
+        <% } %>
+        <% if (link.note) { %>
+          <em> - <%= link.note %></em>
+        <% } %>
+        <%- include('list.ejs', { links: link.links, depth: depth+1 }) %>
+      </li>
+    </ul>
+  <% }); %>
+<% } %>
