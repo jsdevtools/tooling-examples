@@ -68,13 +68,37 @@ module.exports = {
     },
     {
       title: 'ejs',
-      url: '',
-    },
-    {
-      title: 'express-es6-template-engine',
-      url: '',
+      url: 'https://ejs.co',
+      note: '"Embedded Javascript templating." This is a nice blend of writing templates in html, variables and logic in javascript, and easily understoood inclusion of partials.',
       links: [
         {
+          title: 'Docs',
+          url: 'https://ejs.co/#docs',
+        },
+        {
+          title: 'Source Code',
+          url: 'https://github.com/mde/ejs',
+        },
+        {
+          title: 'Package',
+          url: 'https://www.npmjs.com/package/ejs',
+          links: [
+            {
+              title: 'ejs-cli',
+              url: 'https://www.npmjs.com/package/ejs-cli',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: 'es6-template-renderer',
+      note: 'Uses template literals built into es6. Require data, and templates. Templates require partials. And everything is just javascript. Very little to learn beyond what users will already know from working with javascript and thus easy to reason about.',
+      url: 'https://github.com/jsdevtools/es6-template-renderer',
+      links: [
+        {
+          title: 'Source Code',
+          url: 'https://github.com/jsdevtools/es6-template-renderer',
         },
       ],
     },

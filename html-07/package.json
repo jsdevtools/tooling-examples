@@ -1,0 +1,20 @@
+{
+  "name": "html-07",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./locals ./dist ./etr.config.js",
+    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp -r ../locals ./ && shx cp ../locals.config.js ./etr.config.js",
+    "build-only": "node ./node_modules/es6-template-renderer-cli/bin/etr-cli --templates \"*.etr\" --base src/ --locals ./etr.config.js --out ./dist/ --extension \".html\"",
+    "build": "npm run build-only"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-template-renderer-cli": "github:JSDevtools/es6-template-renderer-cli#dev",
+    "shx": "^0.3.2"
+  }
+}

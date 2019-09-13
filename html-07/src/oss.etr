@@ -1,0 +1,5 @@
+const pagePartial = require('./partials/page.etr');
+
+module.exports = (locals) => `
+${pagePartial( { ...locals, topic: locals.topics.oss })}
+`;

@@ -1,0 +1,26 @@
+module.exports = function listPartial( {links, depth} ) {
+  return `
+    ${links
+      ? links.map( (link, idx) => `
+        <ul style='padding: 0px 0px 0px 18px;'>
+          ${(idx && depth < 2)
+            ? `<p></p>`
+            : ``
+          }
+          <li>
+            ${link.url
+              ? `<a href="${link.url}">${link.title}</a>`
+              :  `${link.title}`
+            }
+            ${link.note
+              ? `<em> - ${link.note}</em>`
+              : ``
+            }
+            ${listPartial( { links: link.links, depth: depth+1 } )}
+          </li>
+        </ul>
+      `).join('')
+      : ``
+    }
+  `
+}
