@@ -92,6 +92,31 @@ module.exports = {
       ],
     },
     {
+      title: 'nunjucks',
+      note: 'Pros: feature rich, write templates in html. Cons: need to learn syntax, different tags for substition and flow control.',
+      url: 'https://mozilla.github.io/nunjucks/',
+      links: [
+        {
+          title: 'Website & Docs',
+          url: 'https://mozilla.github.io/nunjucks/',
+        },
+        {
+          title: 'Source Code',
+          url: 'https://github.com/mozilla/nunjucks',
+        },
+        {
+          title: 'Package',
+          url: 'https://www.npmjs.com/package/nunjucks',
+          link: [
+            {
+              title: 'nunjucks-cli',
+              url: 'https://www.npmjs.com/package/nunjucks-cli',
+            },
+          ],
+        },
+      ],
+    },
+    {
       title: 'es6-template-renderer',
       note: 'Uses template literals built into es6. Require data, and templates. Templates require partials. And everything is just javascript. Very little to learn beyond what users will already know from working with javascript and thus easy to reason about.',
       url: 'https://github.com/jsdevtools/es6-template-renderer',

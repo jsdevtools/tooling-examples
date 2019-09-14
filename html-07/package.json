@@ -5,16 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "shx rm -Rf ./locals ./dist ./etr.config.js",
-    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp -r ../locals ./ && shx cp ../locals.config.js ./etr.config.js",
-    "build-only": "node ./node_modules/es6-template-renderer-cli/bin/etr-cli --templates \"*.etr\" --base src/ --locals ./etr.config.js --out ./dist/ --extension \".html\"",
+    "clean": "shx rm -Rf ./locals ./dist ./nunjucks.config.json ./js2json.js",
+    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp ../js2json.js ./ && shx cp -r ../locals ./ && node ./js2json.js --input ../locals.config.js --output nunjucks.config.json",
+    "build-only": "node ./node_modules/nunjucks-cli/main.js \"*.njk\" ./nunjucks.config.json -p src/ -o ./dist/ -e \"html\"",
     "build": "npm run build-only"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "es6-template-renderer-cli": "github:JSDevtools/es6-template-renderer-cli#dev",
+    "nunjucks-cli": "^1.0.0",
     "shx": "^0.3.2"
   }
 }
