@@ -3,6 +3,10 @@ module.exports = {
   url: 'index',
   links: [
     {
+      title: 'How to deploy multiple apps in a monorepo with Heroku',
+      url: 'https://medium.com/inato/how-to-setup-heroku-with-yarn-workspaces-d8eac0db0256',
+    },
+    {
       title: 'Understanding Express.js',
       note: 'Evan Hahn (05 Mar 2014)',
       url: 'https://evanhahn.com/understanding-express/',
