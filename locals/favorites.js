@@ -3,6 +3,11 @@ module.exports = {
   url: 'index',
   links: [
     {
+      title: 'Understanding Express.js',
+      note: 'Evan Hahn (05 Mar 2014)',
+      url: 'https://evanhahn.com/understanding-express/',
+    },
+    {
       title: 'Webpack Authoring Libraries',
       url: 'https://webpack.js.org/guides/author-libraries/',
     },

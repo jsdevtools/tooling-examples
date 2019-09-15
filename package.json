@@ -1,0 +1,16 @@
+{
+  "name": "tooling-examples",
+  "version": "1.0.0",
+  "description": "tooling-examples",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "./scripts/heroku.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsdevtools/tooling-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
