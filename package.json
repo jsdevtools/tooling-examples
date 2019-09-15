@@ -4,7 +4,7 @@
   "description": "tooling-examples",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "./scripts/heroku.sh"
+    "heroku-postbuild": "chmod +x ./scripts/heroku.sh && ./scripts/heroku.sh"
   },
   "repository": {
     "type": "git",
