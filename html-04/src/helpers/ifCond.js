@@ -1,7 +1,7 @@
 var ifCond = function () {};
 
 ifCond.register = function (Handlebars) {
-  Handlebars.registerHelper('ifCond', (v1, operator, v2, options) => {
+  const fn = (v1, operator, v2, options) => {
     switch (operator) {
         case '==':
             return (v1 == v2) ? options.fn(this) : options.inverse(this);
@@ -26,8 +26,15 @@ ifCond.register = function (Handlebars) {
         default:
             return options.inverse(this);
     }
-  });
+  }
+
+  if (Handlebars) {
+    Handlebars.registerHelper('ifCond', fn);
+  } else {
+    return fn;
+  }
 };
 
-module.exports = ifCond;
+ifCond.helper = ifCond.register(null);
 
+module.exports = ifCond;

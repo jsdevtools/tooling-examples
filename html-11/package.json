@@ -1,0 +1,20 @@
+{
+  "name": "html-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./dist ./locals ./locals.config.js ./mustache.config.js",
+    "prestart": "npm run clean && shx mkdir -p ./dist && shx cp -r ../locals ./ && shx cp -r ../html-05/src/* ./dist/ && shx cp ../locals.config.js ./locals.config.js && shx cp ../html-05/mustache.config.js ./mustache.config.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mustache-express": "^1.2.8",
+    "shx": "^0.3.2"
+  }
+}
