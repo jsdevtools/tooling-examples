@@ -28,4 +28,4 @@ app.get('/*.html', function(req, res) {
   res.render(parts.name, data);
 });
 
-http.createServer(options, app).listen(3000);
+http.createServer(options, app).listen(process.env.PORT || 8080);
