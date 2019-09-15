@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./dist",
+    "prestart": "npm run clean && shx mkdir -p ./dist && shx cp -r ../html-08/src/* ./dist/",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "es6-template-renderer-cli": "github:JSDevtools/es6-template-renderer-cli#dev",
     "express": "^4.17.1",
     "shx": "^0.3.2"
   }

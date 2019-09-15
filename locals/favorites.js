@@ -3,6 +3,10 @@ module.exports = {
   url: 'index',
   links: [
     {
+      title: 'Webpack Authoring Libraries',
+      url: 'https://webpack.js.org/guides/author-libraries/',
+    },
+    {
       title: 'minimist',
       note: 'parse argument options',
       links: [

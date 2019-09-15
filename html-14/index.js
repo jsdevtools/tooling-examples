@@ -1,5 +1,4 @@
 const express = require('express');
-const nunjucks = require('nunjucks');
 const https = require('https');
 const http = require('http');
 const path = require('path');
@@ -10,12 +9,9 @@ const app = express();
 const options = {
 };
 
-app.engine('njk', nunjucks.render);
-app.set('view engine', 'njk');
-const njk = nunjucks.configure(['dist/'], {
-  autoescape: true,
-  express: app,
-});
+app.engine('etr', require('es6-template-renderer-cli'));
+app.set('view engine', 'etr');
+app.set('views', path.join(__dirname, 'dist'));
 
 app.get('/', function(req, res) {
   console.log(JSON.stringify(req.url));
