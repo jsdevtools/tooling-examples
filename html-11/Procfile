@@ -1,1 +1,1 @@
-web: node ./${BUILD_ENV}/index.js
+web: sh -c 'cd ./${BUILD_ENV}/ && exec node ./index.js'
