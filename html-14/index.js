@@ -9,7 +9,7 @@ const app = express();
 const options = {
 };
 
-app.engine('etr', require('es6-template-renderer-cli'));
+app.engine('etr', require('es6-template-renderer-cli')());
 app.set('view engine', 'etr');
 app.set('views', path.join(__dirname, 'dist'));
 
