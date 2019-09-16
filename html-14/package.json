@@ -13,7 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "es6-template-renderer-cli": "https://github.com/jsdevtools/es6-template-renderer-cli/tarball/dev",
+    "es6-template-renderer-cli": "github:JSDevtools/es6-template-renderer-cli#dev",
     "express": "^4.17.1",
     "shx": "^0.3.2"
   }
