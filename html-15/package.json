@@ -14,7 +14,8 @@
     "stage:podcasts": "shx cp -r ../html-08/src/podcasts.etr ./src/templates/podcasts-html.etr && shx cp index.js ./src/podcasts.html.js",
     "stage:servers": "shx cp -r ../html-08/src/servers.etr ./src/templates/servers-html.etr && shx cp index.js ./src/servers.html.js",
     "stage:templates": "shx cp -r ../html-08/src/templates.etr ./src/templates/templates-html.etr && shx cp index.js ./src/templates.html.js",
-    "build": "npm-run-all -s stage:* && netlify-lambda serve ./src/"
+    "serve": "npm-run-all -s stage:* && netlify-lambda serve ./src/",
+    "build": "npm-run-all -s stage:* && netlify-lambda build ./src/"
   },
   "keywords": [],
   "author": "",
