@@ -1,0 +1,31 @@
+{
+  "name": "html-15",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./dist ./src",
+    "prebuild": "npm run clean && shx mkdir -p ./src/templates && shx mkdir -p ./dist && shx cp -r ../html-08/src/partials ./src/templates/ && shx cp etr.js ./src/",
+    "stage:favorites": "shx cp -r ../html-08/src/index.etr ./src/templates/index-html.etr && shx cp index.js ./src/index.html.js",
+    "stage:browsers": "shx cp -r ../html-08/src/browsers.etr ./src/templates/browsers-html.etr && shx cp index.js ./src/browsers.html.js",
+    "stage:databases": "shx cp -r ../html-08/src/databases.etr ./src/templates/databases-html.etr && shx cp index.js ./src/databases.html.js",
+    "stage:frontends": "shx cp -r ../html-08/src/frontends.etr ./src/templates/frontends-html.etr && shx cp index.js ./src/frontends.html.js",
+    "stage:oss": "shx cp -r ../html-08/src/oss.etr ./src/templates/oss-html.etr && shx cp index.js ./src/oss.html.js",
+    "stage:podcasts": "shx cp -r ../html-08/src/podcasts.etr ./src/templates/podcasts-html.etr && shx cp index.js ./src/podcasts.html.js",
+    "stage:servers": "shx cp -r ../html-08/src/servers.etr ./src/templates/servers-html.etr && shx cp index.js ./src/servers.html.js",
+    "stage:templates": "shx cp -r ../html-08/src/templates.etr ./src/templates/templates-html.etr && shx cp index.js ./src/templates.html.js",
+    "build": "npm-run-all -s stage:* && netlify-lambda serve ./src/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "es6-template-renderer-cli": "github:JSDevtools/es6-template-renderer-cli#dev",
+    "express": "^4.17.1",
+    "netlify-lambda": "^1.6.3",
+    "npm-run-all": "^4.1.5",
+    "serverless-http": "^2.3.0",
+    "shx": "^0.3.2"
+  }
+}
