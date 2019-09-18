@@ -1,2 +1,2 @@
 [build]
-  functions = "dist/"
+  functions = "./html-15/dist/"
