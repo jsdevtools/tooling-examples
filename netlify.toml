@@ -14,7 +14,7 @@
   # command = "echo 'default context'"
 
   # Directory with the serverless Lambda functions to deploy to AWS.
-  functions = "./html-15/dist/"
+  functions = "./dist/"
 
 [[headers]]
   for = "/*"
