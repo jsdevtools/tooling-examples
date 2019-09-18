@@ -1,6 +1,6 @@
 # Settings in the [build] context are global and are applied to all contexts
 # unless otherwise overridden by more specific contexts.
-# [build]
+[build]
   # Directory to change to before starting a build.
   # This is where we will look for package.json/.nvmrc/etc.
   # base = "project/"
@@ -14,7 +14,7 @@
   # command = "echo 'default context'"
 
   # Directory with the serverless Lambda functions to deploy to AWS.
-  # functions = "project/functions/"
+  functions = "html-15/dist/"
 
 [[headers]]
   for = "/*"
