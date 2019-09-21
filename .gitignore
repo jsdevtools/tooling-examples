@@ -61,5 +61,8 @@ typings/
 .next
 
 dist/
+
 # Local Netlify folder
 .netlify
+
+!.keep
