@@ -3,7 +3,7 @@
 const express = require('express');
 const serverless = require('serverless-http');
 const path = require('path');
-const data = require('../extensionless.config.js');
+const data = require('../../locals.config.js');
 const app = express();
 
 // app.engine('etr', require('./etr.js')());
