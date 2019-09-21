@@ -1,2 +1,3 @@
+# file needed for local testing with netlify-lambda
 [build]
-  functions = "./dist/"
+  functions="dist/"

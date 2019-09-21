@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Recent favorites',
   url: 'index',
+  ext: '.html',
   links: [
     {
       title: 'How to deploy multiple apps in a monorepo with Heroku',

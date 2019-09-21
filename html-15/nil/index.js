@@ -8,7 +8,7 @@ const options = {
 };
 
 app.get('/', function(req, res) {
-  res.redirect('/index.html');
+  res.redirect('/index');
 });
 
 http.createServer(options, app).listen(process.env.PORT || 8080);

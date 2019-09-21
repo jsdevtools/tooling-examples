@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Servers',
   url: 'servers',
+  ext: '.html',
   links: [
     {
       title: 'Apache HTTP Server Project',

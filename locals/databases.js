@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Databases',
   url: 'databases',
+  ext: '.html',
   links: [
     {
       title: 'Relational databases',

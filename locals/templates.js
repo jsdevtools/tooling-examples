@@ -1,6 +1,7 @@
 module.exports = {
   title: 'HTML Template Systems',
   url: 'templates',
+  ext: '.html',
   links: [
     {
       title: 'pug',

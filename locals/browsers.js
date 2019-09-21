@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Browsers',
   url: 'browsers',
+  ext: '.html',
   links: [
     {
       title: 'Chrome',

@@ -41,7 +41,7 @@ module.exports = (locals) => `
                 <ul>
                   ${locals.nav.map( (n) => `
                     <li list-style-type="none">
-                      <a href="${n.filename + '.html'}">${n.title}</a>
+                      <a href="${n.filename + n.ext}">${n.title}</a>
                     </li>
                   `).join('')}
                 </ul>

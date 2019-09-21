@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Podcasts',
   url: 'podcasts',
+  ext: '.html',
   links: [
     {
       title: 'Base.cs',
