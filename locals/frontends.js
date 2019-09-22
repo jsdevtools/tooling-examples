@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Front-end frameworks',
   url: 'frontends',
+  ext: '.html',
   links: [
     {
       title: 'AngularJS',
