@@ -7,7 +7,7 @@ const app = express();
 
 const options = {};
 
-app.use(proxy('objective-northcutt-26b576.netlify.com', {
+app.use(proxy('html-15-fns.jsdevtools.com', {
   proxyReqPathResolver: req => {
     return new Promise( (resolve, reject) => {
       setTimeout( () => {   // simulate async

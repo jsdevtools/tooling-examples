@@ -4,6 +4,20 @@ module.exports = {
   ext: '.html',
   links: [
     {
+      title: 'Axios',
+      note: 'Promise based HTTP client for the browser and node.js ',
+      links: [
+        {
+          title: 'Website & Source Code',
+          url: 'https://github.com/axios/axios',
+        },
+        {
+          title: 'Package',
+          url: 'https://www.npmjs.com/package/axios',
+        },
+      ],
+    },
+    {
       title: 'How to deploy multiple apps in a monorepo with Heroku',
       url: 'https://medium.com/inato/how-to-setup-heroku-with-yarn-workspaces-d8eac0db0256',
     },

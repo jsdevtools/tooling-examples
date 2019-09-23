@@ -1,0 +1,1 @@
+web: sh -c 'cd ./${BUILD_ENV}/ && exec node ./api.js'
