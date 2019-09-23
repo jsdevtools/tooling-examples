@@ -4,7 +4,9 @@
   "main": "api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "shx rm -Rf ./dist ./src",
+    "clean": "shx rm -Rf ./locals ./dist ./locals.config.js",
+    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp ../html-8/src ./",
+    "build": "node ./node_modules/es6-template-renderer-cli/bin/etr-cli --templates \"*.etr\" --base src/ --locals ./locals.config.js --out ./dist/ --extension \".html\"",
     "start": "node ./api.js"
   },
   "keywords": [],
@@ -12,6 +14,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^0.19.0",
+    "es6-template-renderer-cli": "github:JSDevtools/es6-template-renderer-cli#dev",
     "express": "^4.17.1",
     "shx": "^0.3.2"
   }
