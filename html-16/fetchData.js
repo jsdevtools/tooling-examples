@@ -4,7 +4,7 @@ const fs = require('fs');
 const fetchNav = async () => {
   try {
     const response = await axios.get('/nav', {
-      baseURL: 'https://html-16-api.jsdevtools.com',
+      baseURL: 'https://html-api-file.jsdevtools.com',
     });
     return response.data;
   } catch (error) {
@@ -15,7 +15,7 @@ const fetchNav = async () => {
 const fetchTopics = async () => {
   try {
     const response = await axios.get('/topics', {
-      baseURL: 'https://html-16-api.jsdevtools.com',
+      baseURL: 'https://html-api-file.jsdevtools.com',
     });
     return response.data;
   } catch (error) {
