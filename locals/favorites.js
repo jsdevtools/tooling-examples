@@ -4,6 +4,14 @@ module.exports = {
   ext: '.html',
   links: [
     {
+      title: 'Get started with Apollo Server',
+      url: 'https://www.apollographql.com/docs/apollo-server/getting-started/',
+    },
+    {
+      title: 'Create and Deploy a Node.js, Express, & PostgreSQL REST API to Heroku',
+      url: 'https://www.taniarascia.com/node-express-postgresql-heroku/',
+    },
+    {
       title: 'Axios',
       note: 'Promise based HTTP client for the browser and node.js ',
       links: [
