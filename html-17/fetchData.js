@@ -1,16 +1,5 @@
-const axios = require('axios');
 const fs = require('fs');
-
-const fetchLocals = async () => {
-  try {
-    const response = await axios.get('/locals', {
-      baseURL: 'https://html-api-pg.jsdevtools.com',
-    });
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  }
-}
+const { fetchLocals } = require('../fetch-pg');
 
 (async () => {
   const locals = await fetchLocals();
