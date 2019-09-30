@@ -1,7 +1,7 @@
 const { ApolloServer, gql } = require('apollo-server');
 const locals = require('../locals.config.js');
-const { fetchTopics, fetchNav } = require('../fetch-file');
-const { fetchLocals } = require('../fetch-pg');
+const { fetchTopics, fetchNav } = require('fetch-file');
+const { fetchLocals } = require('fetch-pg');
 
 const typeDefs = gql`
   enum BackEndDataSource {
@@ -29,9 +29,15 @@ const typeDefs = gql`
     links: [Link]
   }
 
+  type NavItem {
+    title: String
+    filename: String
+    ext: String
+  }
+
   type Query {
     topics(backEndDataSource: BackEndDataSource): Topics
-    nav: [Link]
+    nav(backEndDataSource: BackEndDataSource): [NavItem]
   }
 `;
 
@@ -60,18 +66,17 @@ const resolvers = {
     nav: async (_, args) => {
       switch(args.backEndDataSource) {
         case 'restPg': {
-          const {favorites, ...rest} = await fetchLocals().topics;;
+          const tempTopics = await fetchLocals();
+          const {favorites, ...rest} = tempTopics.topics;
           return [
             { title: favorites.title, filename: favorites.url, ext: favorites.ext },
             ...Object.entries(rest)
               .sort(([a,],[b,],) => (b < a))
               .map(([key,value])=>({ title: value.title, filename: value.url, ext: value.ext })),
           ];
-          break;
         }
         case 'restFile': {
           return await fetchNav();
-          break;
         }
         case 'localFile': 
         default: {
