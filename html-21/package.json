@@ -1,0 +1,20 @@
+{
+  "name": "html-21",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fetchData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "shx rm -Rf ./locals ./dist ./locals.config.js ./src",
+    "prebuild": "npm run clean && shx mkdir -p ./dist && shx cp -r ../html-08/src ./",
+    "build": "node ./fetchData.js && node ./node_modules/es6-template-renderer-cli/bin/etr-cli --templates \"*.etr\" --base src/ --locals ./locals.config.js --out ./dist/ --extension \".html\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-template-renderer-cli": "github:JSDevtools/es6-template-renderer-cli#dev",
+    "fetch-graphql": "file:../fetch-graphql",
+    "shx": "^0.3.2"
+  }
+}

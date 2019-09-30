@@ -12,9 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.9.4",
+    "dotenv": "^8.1.0",
     "fetch-file": "file:../fetch-file",
     "fetch-pg": "file:../fetch-pg",
     "graphql": "^14.5.8",
+    "node-postgres": "0.0.1",
+    "pg": "^7.12.1",
     "shx": "^0.3.2"
   }
 }
