@@ -4,6 +4,51 @@ module.exports = {
   ext: '.html',
   links: [
     {
+      title: 'The Free AWS Certified Cloud Practitioner Study Course (85+ Videos!)',
+      url: 'https://dev.to/exampro/the-free-aws-certified-cloud-practitioner-study-course-1bcb?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email',
+    },
+    {
+      title: 'rush',
+      url: 'https://rushjs.io',
+    },
+    {
+      title: 'lerna-semver-sync',
+      url: 'https://www.npmjs.com/package/lerna-semver-sync',
+    },
+    {
+      title: 'Monorepo setup with Lerna, TypeScript, Babel 7 and other',
+      links: [
+        {
+          title: 'GitHub Template Repositoy',
+          url: 'https://help.github.com/en/articles/creating-a-template-repository',
+        },
+        {
+          title: 'Part 1',
+          note: 'Basic monorepo setup with Lerna, Babel and TypeScript',
+          url: 'https://medium.com/grand-parade/monorepo-setup-with-lerna-typescript-babel-7-and-other-part-1-ac60eeccba5f',
+        },
+        {
+          title: 'Part 2',
+          note: 'Tslint, Stylelint, Jest, Storybook and Conventional Commit in the monorepo',
+          url: 'https://medium.com/grand-parade/monorepo-setup-with-lerna-typescript-babel-7-and-other-part-2-8b4801076647',
+        },
+        {
+          title: 'Part 3',
+          note: 'First package development and publishing',
+          url: 'https://medium.com/grand-parade/monorepo-setup-with-lerna-typescript-babel-7-and-other-part-3-f9943b290fa4',
+        },
+        {
+          title: 'Part 4',
+          note: 'Multiple packages and magic in TypeScript monorepo configuration',
+          url: 'https://medium.com/grand-parade/monorepo-setup-with-lerna-typescript-babel-7-and-other-part-4-9a468e45c1c3',
+        },
+      ],
+    },
+    {
+      title: 'The Architecture of Open Source Applications',
+      url: 'http://aosabook.org'
+    },
+    {
       title: 'Get started with Apollo Server',
       url: 'https://www.apollographql.com/docs/apollo-server/getting-started/',
     },
