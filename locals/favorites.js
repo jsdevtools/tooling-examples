@@ -4,6 +4,57 @@ module.exports = {
   ext: '.html',
   links: [
     {
+      title: 'svelte-redux-connect',
+      url: 'https://github.com/kolodziejczak-sz/svelte-redux-connect',
+      note: 'Svelte bindings for Redux. Connect API based on react-redux.',
+    },
+    {
+      title: 'How to add Redux to Svelte',
+      url: 'https://linguinecode.com/post/how-to-add-redux-to-svelte',
+    },
+    {
+      title: 'Contributor Agreements',
+      url: 'http://contributoragreements.org/',
+      note: 'The Next Generation of Contributor Agreements.',
+    },
+    {
+      title: 'CLA assistant',
+      url: 'https://cla-assistant.io/',
+      note: 'Easily handle Contributor License Agreements (CLAs)',
+      links: {
+        title: 'Source code',
+        url: 'https://github.com/cla-assistant/cla-assistant',
+      },
+    },
+    {
+      title: 'smee.io',
+      url: 'https://smee.io/',
+      note: 'Webhook payload delivery service',
+    },
+    {
+      title: 'How to use Visual Studio Code as Default Editor for Git',
+      url: 'https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git',
+    },
+    {
+      title: 'Using lint-staged, husky, and pre-commit hooks to fail fast and early',
+      url: 'https://codeburst.io/continuous-integration-lint-staged-husky-pre-commit-hook-test-setup-47f8172924fc',
+    },
+    {
+      title: 'Lucidchart',
+      url: 'https://www.lucidchart.com',
+      note: 'Online Diagram Software and Visual Solution',
+    },
+    {
+      title: 'Gliffy',
+      url: 'https://www.gliffy.com',
+      note: 'Diagram Software and Team Colaboration Tools',
+    },
+    {
+      title: 'Arcentry',
+      url: 'https://arcentry.com',
+      note: 'Create Interactive Cloud Diagrams',
+    },
+    {
       title: 'The Free AWS Certified Cloud Practitioner Study Course (85+ Videos!)',
       url: 'https://dev.to/exampro/the-free-aws-certified-cloud-practitioner-study-course-1bcb?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email',
     },
