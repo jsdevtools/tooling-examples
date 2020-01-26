@@ -21,10 +21,12 @@ module.exports = {
       title: 'CLA assistant',
       url: 'https://cla-assistant.io/',
       note: 'Easily handle Contributor License Agreements (CLAs)',
-      links: {
-        title: 'Source code',
-        url: 'https://github.com/cla-assistant/cla-assistant',
-      },
+      links: [
+        {
+          title: 'Source code',
+          url: 'https://github.com/cla-assistant/cla-assistant',
+        },
+      ],
     },
     {
       title: 'smee.io',
