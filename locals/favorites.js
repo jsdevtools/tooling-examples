@@ -4,6 +4,11 @@ module.exports = {
   ext: '.html',
   links: [
     {
+      title: 'Project Euler',
+      note: 'Project Euler exists to encourage, challenge, and develop the skills and enjoyment of anyone with an interest in the fascinating world of mathematics.',
+      url: 'https://projecteuler.net/',
+    },
+    {
       title: 'exercism',
       url: 'https://exercism.io/',
       note: 'Code practice and mentorship for everyone',
