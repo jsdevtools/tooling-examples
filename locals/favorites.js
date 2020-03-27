@@ -4,6 +4,11 @@ module.exports = {
   ext: '.html',
   links: [
     {
+      title: 'exercism',
+      url: 'https://exercism.io/',
+      note: 'Code practice and mentorship for everyone',
+    },
+    {
       title: 'sharp',
       note: 'High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP and TIFF images.',
       links: [
