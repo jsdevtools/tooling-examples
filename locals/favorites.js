@@ -4,6 +4,24 @@ module.exports = {
   ext: '.html',
   links: [
     {
+      title: 'sharp',
+      note: 'High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP and TIFF images.',
+      links: [
+        {
+          title: 'Website & Documentation',
+          url: 'https://sharp.pixelplumbing.com/',
+        },
+        {
+           title: 'Source Code',
+          url: 'https://github.com/lovell/sharp',
+        },
+        {
+          title: 'Package',
+          url: 'https://www.npmjs.com/package/sharp',
+        },
+      ],
+    },
+    {
       title: 'svelte-redux-connect',
       url: 'https://github.com/kolodziejczak-sz/svelte-redux-connect',
       note: 'Svelte bindings for Redux. Connect API based on react-redux.',
